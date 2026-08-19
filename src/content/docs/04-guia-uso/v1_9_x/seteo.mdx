@@ -1,0 +1,51 @@
+---
+title: Modo Seteo
+sidebar:
+  label: Modo Seteo
+  order: 5
+---
+
+Al entrar en este modo, se muestran dos pantallas de selección de seteos.  
+
+- Seteo de sensores
+- Tiempos de limpieza
+
+![Seteo 1](/images/fw/v1.9.x/pantalla-set1.png)
+
+Con las teclas **SUBIR/BAJAR** se pueden recorrer las opciones para seleccionar la deseada.  
+Presionando **OK** se entra a la pantalla correspondiente.  
+Presionando **CANCELAR** se vuelve al menú anterior.
+
+## Seteo de sensores
+
+Esta pantalla se usa para ajustar los umbrales de los sensores de nivel de producto, para su detección en el modo automático.
+
+![Seteo 2](/images/fw/v1.9.x/pantalla-set2.png)
+
+- **L** = Lectura actual del sensor (valor ADC, 0 a 999).
+- **S** = Nivel de seteo (umbral de comparación).
+
+Con **OK** se desplaza entre sensores y con **SUBIR/BAJAR** se ajusta el umbral.  
+Si la lectura es menor al umbral seteado, la electroválvula correspondiente se cierra.
+
+:::note
+Un valor alto indica que el sensor no detecta el producto.  
+Un valor bajo indica que el sensor detecta el producto.  
+El valor de seteo debe estar entre ambos valores, para que el sensor detecte correctamente el producto.
+:::
+
+:::tip[Recomendación]
+Se recomienda usar un vaso con el producto para ajustar los umbrales de los sensores.  
+Se obtiene una lectura del sensor con el vaso fuera del pico y otra con el vaso dentro del pico.  
+Y se ajusta el umbral entre ambos valores.
+:::
+
+## Tiempos de limpieza
+
+En esta pantalla se configuran los tiempos de apertura de cada electroválvula durante el ciclo de limpieza.  
+Cada valor representa el tiempo (en segundos) que permanece abierta la/las electroválvulas correspodientes a ese circuito.  
+Ajuste si fuera necesario según el producto de limpieza utilizado y la longitud de las mangueras.
+
+![Seteo 3](/images/fw/v1.9.x/pantalla-set3.png)
+
+Con **OK** se desplaza entre los tiempos y con **SUBIR/BAJAR** se ajusta el umbral.

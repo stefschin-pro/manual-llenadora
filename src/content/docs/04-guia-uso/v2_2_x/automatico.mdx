@@ -1,0 +1,130 @@
+---
+title: Modo Automático
+sidebar:
+  label: Modo Automático
+  order: 2
+---
+
+## Selección del tamaño de botella
+
+Al seleccionar **Modo Automático**, se muestra una lista de tamaños de botella predefinidos:
+
+![Selección botella 1](/images/fw/v1.9.x/pantalla-auto1.png)
+![Selección botella 2](/images/fw/v1.9.x/pantalla-auto2.png)
+
+Use las teclas de navegación para elegir y presione **OK**.  
+Presione **CANCELAR** para volver al menú anterior.
+
+La opción **S/CO2** es para un llenado sin contrapresión.
+
+---
+
+## Tiempos de llenado
+
+Al presionar **OK**, nos lleva al menú de selección de los tiempos de los ciclos:
+
+![Tiempos 1](/images/fw/v1.9.x/pantalla-auto3.png)
+![Tiempos 2](/images/fw/v1.9.x/pantalla-auto4.png)
+
+Las opciones disponibles son:
+* **T.BARRIDO CO2:** Tiempo de Barrido de CO₂ en segundos.
+* **T.PRESURIZADO:** Tiempo de presurizado en segundos.
+* **T.DESPRESURI.:** Tiempo de despresurizado en segundos.
+* **T.PREBARRIDO:** Tiempo de pre-barrido de CO₂, antes de bajar el puente, en segundos.
+
+Al presionar **OK** se puede mover entre las opciones en orden descendente; con **SUBIR/BAJAR** se modifica el valor con el signo `>` posicionado anteriormente entre 0 y 99s. Con 0s se salta esa etapa.
+
+Presione **CANCELAR** para volver sin guardar cambios.
+
+:::tip[Recomendación]
+Se recomienda usar la primera vez el Modo Manual para encontrar los tiempos a definir en esta pantalla antes de iniciar un ciclo de llenado automático.
+:::
+
+---
+
+## Ciclo de llenado automático
+
+Al presionar **INICIO**, se muestran las siguientes etapas (si el tiempo correspondiente es > 0):
+
+### Prebarrido con CO₂
+
+![Prebarrido](/images/fw/v1.9.x/pantalla-auto5.png)
+
+### Bajando Puente
+
+![Bajando Puente](/images/fw/v1.9.x/pantalla-auto6.png)
+
+### Barrido con CO₂
+
+![Barrido](/images/fw/v1.9.x/pantalla-auto7.png)
+
+### Presurizado
+
+![Presurizado](/images/fw/v1.9.x/pantalla-auto8.png)
+
+### Llenado de botellas
+
+Esta etapa abre las electroválvulas (EV) del producto para comenzar el llenado a contrapresión. En la pantalla se muestra el estado de cada EV como una botella llena o vacía:
+* Si la muestra **vacía**, indica que la EV está cerrada.
+* Si la muestra **llena**, indica que la EV está abierta.
+
+Al tener un sistema de sensado de líquido en la parte superior, puede cortar la EV automáticamente cuando la botella se llena. Ver **[Seteo de Sensores](/04-guia-uso/v1_9_x/seteo#seteo-de-sensores)**.
+
+![Llenado](/images/fw/v1.9.x/pantalla-auto9.png)
+
+Durante el llenado, se pueden abrir/cerrar las válvulas de llenado del producto individualmente con las teclas del control. Cada tecla corresponde a un pico:
+
+| Tecla Control | Pico Asignado |
+| :--- | :--- |
+| **CANCELAR** | Pico 1 |
+| **SUBIR** | Pico 2 |
+| **BAJAR** | Pico 3 |
+| **OK** | Pico 4 |
+
+![Estado picos](/images/fw/v1.9.x/pantalla-auto10.png)
+
+Cuando los 4 sensores detectan la botella llena o el operador cerró las 4 EV, el control espera 3 segundos por si falta llenar alguna botella y avanza automáticamente al siguiente ciclo.
+
+![Espera](/images/fw/v1.9.x/pantalla-auto11.png)
+
+:::tip[Error de sensores]
+Si un sensor no detecta el nivel correcto, se bloquea la válvula correspondiente. El operador puede forzar la apertura/cierre manualmente con las teclas del control.
+:::
+
+:::note[Diagnóstico integrado]
+Durante el llenado, si se detecta una anomalía en algún sensor, la pantalla mostrará un indicador de error junto al número del pico afectado. El operador puede decidir si continuar o detener el ciclo.
+:::
+
+---
+
+### Despresurizado
+
+![Despresurizado](/images/fw/v1.9.x/pantalla-auto12.png)
+
+:::note[Evitar saltos de presión]
+Si en el ciclo de llenado se acaba el tanque con el producto, u otro problema que no llegue a vaciar la presión antes que levante el puente, 
+en este ciclo se puede presionar **PARADA** para cortar el ciclo automático de despresurizado. 
+El tiempo se detiene y la válvula queda abierta hasta que se presione **INICIO** para continuar, dando tiempo al operador de solucionar el problema.
+:::
+
+![Despresurizado detenido](/images/fw/v1.9.x/pantalla-auto13.png)
+
+---
+
+### Subiendo Puente
+
+![Subiendo Puente](/images/fw/v1.9.x/pantalla-auto14.png)
+
+---
+
+### Parada de Emergencia
+
+En caso de falla, presione **PARADA** para pasar al ciclo de despresurizado y luego levantar el puente.
+
+![Falla](/images/fw/v1.9.x/pantalla-auto15.png)
+
+---
+
+### Finalizado
+
+Al finalizar el llenado, despresurizar las botellas y levantar el puente, se produce un sonido de aviso y la pantalla vuelve a la pantalla de **[Tiempos de llenado](#tiempos-de-llenado)**, para retirar las botellas para taparlas y volver a comenzar un ciclo nuevo.

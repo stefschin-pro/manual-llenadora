@@ -1,17 +1,19 @@
 {
   "name": "manual-llenadora",
+  "version": "1.0.0",
   "type": "module",
-  "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --host",
     "start": "astro dev",
     "build": "astro build",
+    "clean": "node -e \"fs.rmSync('.astro', { recursive: true, force: true })\"",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "pdf:generate": "node scripts/generate-pdf.js"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.41.7",
-    "astro": "^7.1.6",
-    "sharp": "^0.35.3"
+    "astro": "^7.2.2",
+    "puppeteer": "^21.11.0"
   }
 }

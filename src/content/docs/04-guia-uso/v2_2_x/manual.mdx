@@ -1,0 +1,65 @@
+---
+title: Modo Manual
+sidebar:
+  label: Modo Manual
+  order: 3
+---
+
+Al entrar en este modo, se muestran dos pantallas de selección de acciones, que se pueden recorrer con las teclas **SUBIR/BAJAR** para seleccionar la acción deseada.  
+Presionando **INICIO** se ejecuta el ciclo que está marcada con el signo `>`.  
+Mientras se ejecuta la acción, se marca con `█` y se puede presionar **PARADA** para detenerla.  
+Al costado derecho del mismo, se verá un contador del tiempo en el que estuvo esa etapa en ejecución.  
+
+Al presionar **CANCELAR** se vuelve al menú anterior en ambas pantallas.
+
+## Primera pantalla
+
+![Manual 1](/images/fw/v1.9.x/pantalla-manual1.png)
+
+Seleccione la acción deseada y presione **INICIO** para ejecutarla.  
+Salvo para **BAJAR PUENTE** la acción se mantendrá hasta presionar **PARADA**.
+
+![Manual 2](/images/fw/v1.9.x/pantalla-manual2.png)
+
+La opción seleccionada se marca con con `█` y se ejecuta esa etapa.  
+Presione **PARADA** para detenerla.
+
+## Segunda pantalla
+
+Esta pantalla aparece al bajar presionando **BAJAR** desde el último ciclo de la primera pantalla.  
+Funciona de la misma manera que la primera, pero con otras acciones disponibles.  
+Al subir presionando **SUBIR** desde el primer ciclo, se vuelve a la primera pantalla.  
+Y al bajar presionando **BAJAR** desde el último ciclo, se vuelve a la primera pantalla.  
+
+![Manual 3](/images/fw/v1.9.x/pantalla-manual3.png)
+
+Seleccione la acción deseada y presione **INICIO** para ejecutarla.  
+Salvo para **SUBIR PUENTE** la acción se mantendrá hasta presionar **PARADA**.
+
+
+### Llenado manual
+
+Esta etapa abre las electroválvulas (EV) del producto para comenzar el llenado a contrapresión. En la pantalla se muestra el estado de cada EV como una botella llena o vacía:
+* Si la muestra **vacía**, indica que la EV está cerrada.
+* Si la muestra **llena**, indica que la EV está abierta.
+
+![Manual 4](/images/fw/v1.9.x/pantalla-manual4.png)
+
+Durante el llenado, se pueden abrir/cerrar las válvulas de llenado del producto individualmente con las teclas del control. Cada tecla corresponde a un pico:
+
+| Tecla Control | Pico Asignado |
+| :--- | :--- |
+| **CANCELAR** | Pico 1 |
+| **SUBIR** | Pico 2 |
+| **BAJAR** | Pico 3 |
+| **OK** | Pico 4 |
+
+![Manual 5](/images/fw/v1.9.x/pantalla-manual5.png)
+
+Al finalizar el llenado:
+
+- Presione **PARADA** para salir sin guardar.
+- Presione **INICIO** para guardar los valores de los sensores calculados y se mostrará confirmación o error de lo calculado.
+
+![Manual 6](/images/fw/v1.9.x/pantalla-manual6.png)
+![Manual 7](/images/fw/v1.9.x/pantalla-manual7.png)

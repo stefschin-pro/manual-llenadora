@@ -1,40 +1,45 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
-hero:
-  tagline: Congrats on setting up a new Starlight project!
-  image:
-    file: ../../assets/houston.webp
-  actions:
-    - text: Example Guide
-      link: /guides/example/
-      icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
+title: Manual de usuario
+description: Manual de usuario de la llenadora de botellas a contrapresión LlenaMax4
+template: splash
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+<style>{`
+  /* Centra el título generado automáticamente por Starlight desde el frontmatter */
+  h1#_top {
+    text-align: center !important;
+  }
+`}</style>
 
-## Next steps
+<div style="text-align: center; padding: 1rem 1rem 2rem 1rem; max-width: 750px; margin: 0 auto;">
 
-<CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
-</CardGrid>
+  {/* 1. Logo Cervemaq */}
+  <img 
+    src="/images/logo-cervemaq.png" 
+    alt="Logo Cervemaq" 
+    style="margin: 1.5rem auto 2rem auto; display: block; max-width: 500px; width: 100%; height: auto;" 
+  />
+
+  {/* 2. Subtítulo (Modelo) */}
+  <h2 style="font-size: 1.3rem; font-weight: 500; color: var(--sl-color-accent); margin-top: 0; margin-bottom: 1.8rem; border: none;">
+    Modelo: LlenaMax4
+  </h2>
+
+  {/* 3. Texto descriptivo */}
+  <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 0.8rem; color: var(--sl-color-gray-1);">
+    Llenadora de botellas a contrapresión para pequeñas y medianas cervecerías artesanales.
+  </p>
+
+  <p style="font-size: 0.95rem; line-height: 1.5; color: var(--sl-color-gray-3); margin-bottom: 2.5rem;">
+    Este documento contiene toda la información necesaria para operar, mantener y resolver problemas de su equipo.
+  </p>
+
+  {/* 4. Botón Comenzar */}
+  <a 
+    href="/00-preliminares/seguridad" 
+    style="display: inline-block; padding: 0.8rem 2.2rem; background-color: var(--sl-color-accent); color: white; text-decoration: none; border-radius: 8px; font-size: 1rem; font-weight: bold;"
+  >
+    Comenzar &rarr;
+  </a>
+
+</div>

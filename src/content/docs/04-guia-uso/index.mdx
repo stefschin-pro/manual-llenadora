@@ -1,0 +1,126 @@
+---
+title: Guía de Uso
+description: Selección de versión de Firmware según la pantalla inicial del equipo.
+---
+
+Al encender la llenadora, la pantalla mostrará durante unos segundos la versión de Firmware instalada en su equipo:
+
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="/images/fw/v1.9.x/pantalla-inicial.png" alt="Pantalla de inicio del equipo" style="max-width: 100%; max-height: 300px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+</div>
+
+---
+
+### Seleccione su versión de Firmware
+
+Consulte la versión informada en su pantalla y selecciónela a continuación para ingresar a la Guía correspondiente:
+
+<style>{`
+  .version-card {
+    background: var(--sl-color-bg-nav);
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 12px;
+    padding: 1.75rem;
+    margin: 1.5rem auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    max-width: 440px;
+  }
+
+  .version-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .version-card-icon {
+    font-size: 1.4rem;
+    line-height: 1;
+  }
+
+  .version-card-title {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--sl-color-white);
+  }
+
+  .version-select-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .version-select-label {
+    font-size: 0.875rem;
+    color: var(--sl-color-gray-2);
+  }
+
+  .version-select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--sl-color-gray-4);
+    background-color: var(--sl-color-bg);
+    color: var(--sl-color-white);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+  }
+
+  .version-select:focus {
+    border-color: var(--sl-color-accent);
+    box-shadow: 0 0 0 3px rgba(var(--sl-color-accent-rgb), 0.2);
+  }
+
+  .btn-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    background-color: var(--sl-color-accent);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.15s ease, filter 0.2s ease;
+    text-decoration: none;
+  }
+
+  .btn-submit:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+  }
+
+  .btn-submit:active {
+    transform: translateY(0);
+  }
+`}</style>
+
+<div class="version-card">
+  <div class="version-card-header">
+    <span class="version-card-icon">⚙️</span>
+    <span class="version-card-title">Versión de Firmware</span>
+  </div>
+
+  <div class="version-select-group">
+    <label for="version-select" class="version-select-label">Seleccione la versión instalada:</label>
+    <select id="version-select" class="version-select">
+      <option value="/04-guia-uso/v1_9_x/principal">v1.9.x (Actual)</option>
+      <option value="/04-guia-uso/v2_2_x/principal">v2.2.x (Trabajando)</option>
+      <option value="/04-guia-uso/v2_3_x/principal">v2.3.x (Próximamente)</option>
+    </select>
+  </div>
+
+  <button 
+    class="btn-submit" 
+    onclick="const val = document.getElementById('version-select').value; if(val) window.location.href = val;"
+  >
+    Ingresar ➔
+  </button>
+</div>
