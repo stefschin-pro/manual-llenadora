@@ -8,12 +8,13 @@
     "build": "astro build",
     "clean": "node -e \"fs.rmSync('.astro', { recursive: true, force: true })\"",
     "preview": "astro preview",
-    "astro": "astro",
-    "pdf:generate": "node scripts/generate-pdf.js"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.41.7",
-    "astro": "^7.2.2",
-    "puppeteer": "^21.11.0"
+    "astro": "^7.2.2"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
   }
 }
