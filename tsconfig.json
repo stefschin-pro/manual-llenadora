@@ -4,6 +4,7 @@
   "exclude": ["**/dist/**", "**/__coverage__/**", "**/build/**"],
   "compilerOptions": {
     "jsx": "preserve",
+    "jsxImportSource": "astro",
     "checkJs": true
   }
 }
