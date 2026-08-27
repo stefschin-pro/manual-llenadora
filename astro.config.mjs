@@ -5,7 +5,7 @@ export default defineConfig({
   site: 'https://tu-dominio.pages.dev',
   integrations: [
     starlight({
-      title: 'Manual de Usuario - Cervemaq',
+      title: 'Manual de Usuario - LlenaMax4',
       description: 'Manual de usuario de la llenadora LlenaMax4',
       favicon: '/favicon.svg',
 
@@ -47,7 +47,7 @@ export default defineConfig({
         {
           label: 'Guía de Uso',
           items: [
-            { label: 'Seleccionar Versión (Inicio)', link: '/04-guia-uso/' },
+            { label: 'Seleccionar Versión', link: '/04-guia-uso/' },
             {
               label: 'v1.9.x',
               collapsed: true,
@@ -86,11 +86,12 @@ export default defineConfig({
         {
           label: 'Limpieza y Mantenimiento',
           items: [
-            { label: 'Limpieza y Mantenimiento', link: '/05-limpieza-mantenimiento/limpieza-mantenimiento' },
+            { label: 'Limpieza', link: '/05-limpieza-mantenimiento/limpieza' },
+            { label: 'Mantenimiento', link: '/05-limpieza-mantenimiento/mantenimiento' },
           ],
         },
         {
-          label: 'Troubleshooting',
+          label: 'Problemas conocidos',
           items: [
             { label: 'Problemas conocidos', link: '/06-troubleshooting/troubleshooting' },
           ],

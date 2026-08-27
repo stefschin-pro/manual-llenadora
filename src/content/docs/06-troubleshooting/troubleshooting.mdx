@@ -1,32 +1,61 @@
 ---
-title: Problemas conocidos (Troubleshooting)
+title: Problemas conocidos
 sidebar:
+  label: Problemas conocidos
   order: 1
 ---
 
-## Alarmas y posibles causas
+## Síntomas y posibles causas
 
-| Código / Síntoma | Descripción | Causa probable | Solución |
-|------------------|-------------|----------------|----------|
-| E-001 | Bajo nivel de producto | Depósito vacío o manguera obstruida | Rellenar el depósito, revisar la manguera. |
-| E-002 | Presión de aire insuficiente | Fuga en la red o compresor apagado | Verificar conexiones neumáticas y presión. |
-| E-003 | Atasco en la base | Botella mal posicionada o deformada | Retirar la botella, limpiar la base. |
-| E-004 | Error en sensor de nivel | Sensor sucio, descalibrado o averiado | Limpiar, recalibrar (Modo Seteo) o reemplazar. |
-| E-005 | Fallo de comunicación | Cableado suelto entre HMI y PLC | Revisar conectores y cableado. |
-| — | La máquina no arranca | Pulsador de emergencia activado, falta de aire o presión de CO₂ | Desactivar emergencia, verificar aire y CO₂. |
-| — | Llenado impreciso | Tiempos mal configurados o sensores descalibrados | Ajustar tiempos, recalibrar sensores. |
+<style>{`
+  .custom-table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--sl-color-gray-4);
+  }
+  .custom-table-container th, 
+  .custom-table-container td {
+    border: 1px solid var(--sl-color-gray-4);
+    padding: 0.75rem;
+  }
+  .custom-table-container td:nth-child(1) {
+    color: #ef4444; /* Rojo */
+    font-weight: 600;
+  }
+  .custom-table-container td:nth-child(3) {
+    color: #22c55e; /* Verde */
+  }
+`}</style>
 
-## Si el problema persiste
-- Anote el código de error y la versión del firmware.
-- Contacte con soporte técnico proporcionando la mayor cantidad de detalles posible.
+<div class="custom-table-container">
 
-## Preguntas frecuentes
+| Síntoma | Causa probable | Solución |
+| :--- | :--- | :--- |
+| **La máquina no enciende** | Falta de energía, interruptor de encendido apagado o enchufe roto | Enchufar a la red eléctrica, encender con el interruptor ubicado del lateral derecho, reparar/cambiar enchufe. |
+| **No baja el puente** | Fuga en la red de aires comprimido o compresor apagado | Verificar conexiones neumáticas y ajustar la presión a 6 bares. |
+| **Fallo del sistema de contrapresión** | Falta de presión de aire, demasiada presión de CO₂ o botella fuera de lugar | Revisar presión de aire a 6 bares, revisar presión de CO₂ a no más de 2.5 bares, revisar posición de las botellas para un buen contacto con el sello de goma. |
+| **Error de sensor de nivel** | Sensor sucio, descalibrado o averiado | Limpiar, recalibrar en el **[Modo Seteo](/04-guia-uso/v1_9_x/seteo#seteo-de-sensores)** o reemplazar. |
+| **Llenado con mucha espuma** | Temperatura del producto alta, carbonatación alta o Velocidad de llenado | Revisar que la temperatura del producto no sea mayor a 4 °C, que la carbonatación no sea mayor a 2.7 volúmenes de CO₂, ajustar la velocidad de llenado con la llave de paso para no bajar demasiado la presión de llenado. |
+| **Variación en el llenado entre botellas** | EV con impurezas, mangueras obstruidas | Revisar/limpiar sellos de las EV para que trabajen todas iguales en su máxima apertura, revisar mangueras y conectores. |
 
-**¿Por qué la máquina no arranca?**  
-Verifique que el pulsador de emergencia esté desactivado, que la presión de aire sea suficiente y que la llave de encendido esté en ON.
+</div>
 
-**¿El llenado no es preciso?**  
-Calibre los sensores en el Modo Seteo y verifique los tiempos de llenado. Asegúrese de que el producto esté a la temperatura adecuada.
+---
 
-**¿Cómo sé qué versión de firmware tengo?**  
-La versión aparece en la pantalla de inicio al encender la máquina.
+:::caution[Si el problema persiste]
+Anote el síntoma exacto y la versión de firmware instalada en su equipo.  
+Contacte con el servicio de soporte técnico de **Cervemaq** proporcionando la mayor cantidad de detalles posible.
+:::
+
+---
+
+## Preguntas Frecuentes (FAQ)
+
+**¿Cómo sé qué versión de firmware tiene instalada mi equipo?**  
+La versión de firmware se muestra en la pantalla principal durante los primeros 5 segundos al encender la máquina. Para seleccionar la versión de manual correspondiente, consulte la página de **[Selección de Versión](/04-guia-uso/)**.
+
+**¿Por qué sale mucha espuma durante el llenado?**  
+Asegúrese de que el producto se encuentre a una temperatura no mayor a 4 °C y con un nivel de carbonatación adecuado (máx. 2.7 vol/CO₂). Regule la **[Llave de paso tipo Aguja](/02-detalles-producto/componentes#llave-de-paso-tipo-aguja)** gradualmente para mantener estable la presión de llenado.
+
+**¿Qué hago si el puente neumático no realiza los movimientos de bajada/subida?**  
+Verifique que la presión del aire comprimido esté fijada en **6 bares** en el manómetro lateral y compruebe que no existan fugas o mangueras obstruidas.

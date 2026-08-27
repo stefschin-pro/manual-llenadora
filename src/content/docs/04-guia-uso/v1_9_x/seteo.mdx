@@ -3,49 +3,65 @@ title: Modo Seteo
 sidebar:
   label: Modo Seteo
   order: 5
+next:
+  link: /05-limpieza-mantenimiento/limpieza
+  label: Limpieza y Mantenimiento
 ---
 
-Al entrar en este modo, se muestran dos pantallas de selección de seteos.  
+import { Badge } from '@astrojs/starlight/components';
 
-- Seteo de sensores
-- Tiempos de limpieza
+<Badge text="Firmware v1.9.x" variant="note" size="medium" />
+
+---
+
+Al entrar en este modo, se muestran las dos opciones de configuración disponibles:
+
+* **Seteo de sensores**
+* **Tiempos de limpieza**
 
 ![Seteo 1](/images/fw/v1.9.x/pantalla-set1.png)
 
-Con las teclas **SUBIR/BAJAR** se pueden recorrer las opciones para seleccionar la deseada.  
-Presionando **OK** se entra a la pantalla correspondiente.  
-Presionando **CANCELAR** se vuelve al menú anterior.
+Con las teclas **SUBIR / BAJAR** se pueden recorrer las opciones para seleccionar la deseada:
+* Presione **OK** para ingresar a la pantalla correspondiente.
+* Presione **CANCELAR** para volver al menú anterior.
+
+---
 
 ## Seteo de sensores
 
-Esta pantalla se usa para ajustar los umbrales de los sensores de nivel de producto, para su detección en el modo automático.
+Esta pantalla se utiliza para calibrar los umbrales de los sensores de nivel de producto, necesarios para el corte automático en el **[Modo Automático](/04-guia-uso/v1_9_x/automatico)**.
 
 ![Seteo 2](/images/fw/v1.9.x/pantalla-set2.png)
 
-- **L** = Lectura actual del sensor (valor ADC, 0 a 999).
-- **S** = Nivel de seteo (umbral de comparación).
+* **L** = Lectura actual en tiempo real del sensor (valor ADC, de 0 a 999).
+* **S** = Nivel de seteo (umbral de comparación configurado).
 
-Con **OK** se desplaza entre sensores y con **SUBIR/BAJAR** se ajusta el umbral.  
-Si la lectura es menor al umbral seteado, la electroválvula correspondiente se cierra.
+Con **OK** se desplaza entre los 4 sensores y con **SUBIR / BAJAR** se ajusta el valor del umbral (`S`).  
+Si la lectura en tiempo real (`L`) es **menor** al umbral seteado (`S`), el control interpreta que la botella está llena y cierra la electroválvula correspondiente.
 
-:::note
-Un valor alto indica que el sensor no detecta el producto.  
-Un valor bajo indica que el sensor detecta el producto.  
-El valor de seteo debe estar entre ambos valores, para que el sensor detecte correctamente el producto.
+:::note[Comportamiento de la lectura]
+* **Valor alto:** El sensor no detecta producto (botella vacía/aire).
+* **Valor bajo:** El sensor detecta la presencia de líquido (botella llena).
+
+El valor del umbral **S** debe fijarse en un punto intermedio entre ambas lecturas para garantizar una detección precisa.
 :::
 
-:::tip[Recomendación]
-Se recomienda usar un vaso con el producto para ajustar los umbrales de los sensores.  
-Se obtiene una lectura del sensor con el vaso fuera del pico y otra con el vaso dentro del pico.  
-Y se ajusta el umbral entre ambos valores.
+:::tip[Procedimiento de calibración recomendado]
+1. Tome un vaso con el producto a llenar.
+2. Tome la lectura `L` del sensor con el pico al aire (fuera del vaso).
+3. Tome la lectura `L` introduciendo el pico dentro del vaso con líquido.
+4. Ajuste el umbral `S` en un valor intermedio entre ambas lecturas obtenidas.
 :::
+
+---
 
 ## Tiempos de limpieza
 
-En esta pantalla se configuran los tiempos de apertura de cada electroválvula durante el ciclo de limpieza.  
-Cada valor representa el tiempo (en segundos) que permanece abierta la/las electroválvulas correspodientes a ese circuito.  
-Ajuste si fuera necesario según el producto de limpieza utilizado y la longitud de las mangueras.
+En esta pantalla se configuran los tiempos de apertura de cada electroválvula durante el ciclo automático de limpieza[cite: 1].
 
 ![Seteo 3](/images/fw/v1.9.x/pantalla-set3.png)
 
-Con **OK** se desplaza entre los tiempos y con **SUBIR/BAJAR** se ajusta el umbral.
+Cada valor representa el tiempo (en segundos) que permanecerá abierta la electroválvula correspondiente a cada circuito.  
+Ajuste según el producto de limpieza/sanitizante utilizado y la longitud de las mangueras de su instalación.
+
+Con **OK** se desplaza entre los diferentes campos de tiempo y con **SUBIR / BAJAR** se modifica el valor en segundos.

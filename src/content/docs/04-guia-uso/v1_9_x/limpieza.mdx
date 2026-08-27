@@ -5,48 +5,71 @@ sidebar:
   order: 4
 ---
 
-Siga estos pasos para realizar la limpieza:
+import { Badge } from '@astrojs/starlight/components';
+
+<Badge text="Firmware v1.9.x" variant="note" size="medium" />
+
+---
+
+:::tip[Conexiones y Productos Recomendados]
+Antes de iniciar, consulte los [Productos de Limpieza Recomendados](/05-limpieza-mantenimiento/limpieza#productos-recomendados) y el esquema de conexión. Se recomienda usar la **T de acople rápido** para ingresar con la solución de limpieza tanto por la entrada de **Producto** como por la de **CO₂**, garantizando la sanitización completa de todas las electroválvulas y circuitos.
+:::
+
+---
+
+Siga estos pasos preliminares antes de ejecutar la limpieza:
 
 1. Desconecte la manguera de CO₂ del tubo que va a la máquina.
-2. Conecte la manguera de limpieza (desde el barril con producto de limpieza) a la entrada de CO₂ mediante la **T de acople rápido** que se incluye.
+2. Conecte la manguera de limpieza (desde el barril con producto de limpieza) a las entradas de producto y CO₂ mediante la **T de acople rápido** incluida.
 3. Abra al máximo la llave de paso que está al costado de la máquina.
 4. Coloque 4 botellas vacías en la base.
 5. Seleccione **Modo Limpieza** y presione **INICIO**.
 6. Una vez terminado el ciclo de limpieza (o enjuague con agua caliente), presione **PARADA** y espere a que termine el ciclo.
 
-Al entrar en este modo, se muestran dos pantallas de selección de acciones, que se pueden recorrer con las teclas **SUBIR/BAJAR** para seleccionar la acción deseada.  
-Presionando **OK** se entra a la pantalla correspondiente.  
-Presionando **CANCELAR** se vuelve al menú anterior.
+---
+
+Al entrar en este modo, se muestran dos opciones de trabajo:
 
 ![Limpieza 1](/images/fw/v1.9.x/pantalla-limp1.png)
+
+Navegue con las teclas **SUBIR / BAJAR** para seleccionar la acción deseada:
+* Presione **OK** para ingresar a la pantalla correspondiente.
+* Presione **CANCELAR** para volver al menú anterior.
+
+---
 
 ## Limpiar Máquina
 
 Seleccione **INICIAR LIMPIEZA** y presione **INICIO**.  
-Las electroválvulas se abrirán en secuencia según los tiempos configurados en Modo Seteo: **[Tiempos de Limpieza](/04-guia-uso/v1_9_x/seteo#tiempos-de-limpieza)**.
+Las electroválvulas se abrirán en secuencia según los tiempos configurados en el **[Modo Seteo (Tiempos de Limpieza)](/04-guia-uso/v1_9_x/seteo#tiempos-de-limpieza)**.
 
 ![Limpieza 2](/images/fw/v1.9.x/pantalla-limp2.png)
 
-Una vez finalizado el ciclo, se mostrará la pantalla de finalización.
+Una vez finalizado el ciclo, se mostrará la pantalla de confirmación:
 
 ![Limpieza 4](/images/fw/v1.9.x/pantalla-limp4.png)
 
-Para detener antes de que termine el ciclo, presione **PARADA**.
+:::caution[Detención manual]
+Para detener el proceso antes de que se cumpla el tiempo configurado, presione **PARADA**.
+:::
 
 ![Limpieza 3](/images/fw/v1.9.x/pantalla-limp3.png)
 
-## Barrer Liquido
+---
+
+## Barrer Líquido
 
 Seleccione **BARRER LIQUIDO** y presione **INICIO**.  
-Se abren todas las electroválvulas para eliminar residuos que puedan quedar con aire o CO₂.
+Se abrirán todas las electroválvulas para evacuar cualquier residuo o resto de aire/CO₂ en el circuito.
 
 ![Limpieza 5](/images/fw/v1.9.x/pantalla-limp5.png)
 
-Una vez finalizado el ciclo, se mostrará la pantalla de finalización.
-
+Una vez finalizado el ciclo, se mostrará la pantalla de confirmación:
 
 ![Limpieza 7](/images/fw/v1.9.x/pantalla-limp7.png)
 
-Para detener antes de que termine el ciclo, presione **PARADA**.
+:::caution[Detención manual]
+Para detener la maniobra de barrido antes de que finalice, presione **PARADA**.
+:::
 
 ![Limpieza 6](/images/fw/v1.9.x/pantalla-limp6.png)
